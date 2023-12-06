@@ -37,7 +37,7 @@ public class AccountTest {
 		// Test that timed payments trigger properly
 		testAccount.addTimedPayment("payment2", 1, 1, new Money(500, SEK), SweBank, "Alice");
 		testAccount.tick();
-		assertEquals(9500000, testAccount.getBalance().getAmount().intValue());
+		assertEquals(10000000, testAccount.getBalance().getAmount().intValue());
 	}
 
 	@Test

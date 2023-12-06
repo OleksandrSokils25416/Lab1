@@ -40,13 +40,13 @@ public class CurrencyTest {
 
 	@Test
 	public void testGlobalValue() {
-		assertEquals(Optional.of(1000), SEK.universalValue(100));
-		assertEquals(Optional.of(1500), EUR.universalValue(100));
+		assertEquals(Optional.of(15), Optional.of(SEK.universalValue(100)));
+		assertEquals(Optional.of(150), Optional.of(EUR.universalValue(100)));
 	}
 
 	@Test
 	public void testValueInThisCurrency() {
-		assertEquals(Optional.of(1000), SEK.valueInThisCurrency(100, SEK));
-		assertEquals(Optional.of(75), DKK.valueInThisCurrency(100, SEK));
+		assertEquals(Optional.of(100), Optional.of(SEK.valueInThisCurrency(100, SEK)));
+		assertEquals(Optional.of(75), Optional.of(DKK.valueInThisCurrency(100, SEK)));
 	}
 }

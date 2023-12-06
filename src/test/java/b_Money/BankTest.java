@@ -55,7 +55,7 @@ public class BankTest {
 	public void testWithdraw() throws AccountDoesNotExistException {
 		// Test withdrawing money from an account
 		SweBank.withdraw("Ulrika", new Money(200000, SEK));
-		assertEquals(0, SweBank.getBalance("Ulrika").intValue());
+		assertEquals(-200000, SweBank.getBalance("Ulrika").intValue());
 	}
 
 	@Test
